@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceBook Sign-Up</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin-top: 30px;
+    }
+
+    .bb{
+        background-color: gray;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 70px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        display: block;
+        margin-right: auto;margin-left: auto;
+    }
+
+    input,select,option {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width:240px ;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    a {
+        color: #3b5998;
+        text-decoration: none;
+    }
+    .Sign_up{
+        margin-top: 100px;
+    }
+    .btn{
+        width: 100px;
+        padding: 10px;
+        font-size: 16px;
+        margin: auto;
+    }
+
+</style>
+<body>
+<div class="Sign_up">
+    <form method="post" th:action="@{/Sign}" th:object="${signUpForm}">
+        <label>First Name : <input type="text" th:field="*{firstname}" name="firstName" required></label>
+        <label>Last Name : <input type="text" th:field="*{lastname}" id="lastName" required></label>
+        <!-- <label>Gender : <input type="" th:field="*{gender}" id="gender" required></label>-->
+        <label> Dob: <input type="date" th:field="*{dob}" class="form-control" id="date" placeholder="Select Date of Birth" name="dob" required></label>
+        <label>Email : <input type="email" th:field="*{email}" id="email" required></label>
+        <label>Password : <input type="password" th:field="*{password}" id="password" required></label>
+
+        <select name="gender" class="user-input">
+            <option value="female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+        <button class="btn" type="submit">SUBMIT</button>
+
+    </form>
+</div>
+<p>Already have an account? <a href="/"><h1 style="text-align: center">Login</h1></a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin-top: 30px;
+}
+
+.bb{
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;margin-left: auto;
+}
+
+input,select,option {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width:240px ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #3b5998;
+    text-decoration: none;
+}
+.Sign_up{
+    margin-top: 100px;
+}
